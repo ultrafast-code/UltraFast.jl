@@ -1,0 +1,74 @@
+.script:
+  script:
+    - |
+      julia --project=@. -e '
+        using Pkg
+        Pkg.build()
+        Pkg.test(coverage=true)'
+.coverage:
+  coverage: /Test coverage (\d+\.\d+%)/
+  after_script:
+    - |
+      julia -e '
+        using Pkg
+        Pkg.add("Coverage")
+        using Coverage
+        c, t = get_summary(process_folder())
+        using Printf
+        @printf "Test coverage %.2f%%\n" 100c / t'
+Julia 1.10:
+  image: julia:1.10
+  extends:
+    - .script
+    - .coverage
+pages:
+  image: julia:1.10
+  stage: deploy
+  before_script:
+    - apt-get update -qy  # Update package lists
+    - apt-get install -y git  # Install git
+  script:
+    - |
+      julia --project=docs -e '
+        using Pkg
+        Pkg.develop(PackageSpec(path=pwd()))
+        Pkg.instantiate()
+        using Documenter: doctest, DocMeta
+        using UltraFast
+        DocMeta.setdocmeta!(UltraFast,:DocTestSetup,:(using UltraFast);recursive=true)
+        doctest(UltraFast)
+        include("docs/make.jl")'
+    - mkdir -p public
+    - mv docs/build/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
+docs_preview:
+  image: julia:1.10
+  stage: deploy
+  before_script:
+    - apt-get update -qy
+    - apt-get install -y git
+  script:
+    - |
+      julia --project=docs -e '
+        using Pkg
+        Pkg.develop(PackageSpec(path=pwd()))
+        Pkg.instantiate()
+        using Documenter: doctest, DocMeta
+        using UltraFast
+        DocMeta.setdocmeta!(UltraFast,:DocTestSetup,:(using UltraFast);recursive=true)
+        doctest(UltraFast)
+        include("docs/make.jl")'
+    - mkdir -p docs_preview
+    - mv docs/build/* docs_preview/
+  artifacts:
+    name: "docs_preview_$CI_COMMIT_REF_NAME"
+    paths:
+      - docs_preview
+    expire_in: 1 week
+  except:
+    - main

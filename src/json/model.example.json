@@ -1,0 +1,54 @@
+{
+    "model_name": "rbm_1",
+    "type": "v1",
+    "sampling_size": 2000,
+    "niterations": 300,
+    "model": {
+        "type": "rbm",
+        "settings": {
+            "alpha": 16,
+            "nspins": 200
+        }
+    },
+    "optimiser": {
+        "type": "descent",
+        "settings": {
+            "learning_rate": 0.1
+        }
+    },
+    "system": {
+        "type": "heisenberg2D",
+        "settings": {
+            "Jx": 1.0,
+            "Jy": 1.0,
+            "Lx": 4,
+            "Ly": 4
+        }
+    },
+    "optimization": {
+        "type": "metropolis",
+        "settings": {
+            "thermalisation": 1000,
+            "sweeps": 1000,
+            "updates": 1
+        }
+    },
+    "observables": [
+        {
+            "type": "magnetisation",
+            "settings": {
+                "axis": "x"
+            }
+        },
+        {
+            "type": "magnetisation",
+            "settings": {
+                "axis": "y"
+            }
+        },
+        {
+            "type": "energy"
+        }
+    ]
+
+}

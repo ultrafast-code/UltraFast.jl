@@ -1,0 +1,53 @@
+name = "UltraFast"
+uuid = "0b0c5ec2-40dd-4af4-8d7d-b06ec105fad4"
+authors = ["R.J.L.F. Berns, P.F.A. Coenders, G. Fabiani and J.H. Mentink"]
+version = "3.0.0"
+
+[deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
+Dagger = "d58978e5-989f-55fb-8d15-ea34adc7bf54"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+Functors = "d9f16b24-f501-4c13-a1f2-28368ffc5196"
+IterativeSolvers = "42fd0dbc-a981-5370-80f2-aaf504508153"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
+NNlib = "872c559c-99b0-510c-b3b7-b6c96a88d5cd"
+NamedTupleTools = "d9ec5142-1e00-5aa0-9d6a-321866360f50"
+OnlineStats = "a15396b6-48d5-5d58-9928-6d29437db91e"
+Optimisers = "3bd65402-5787-11e9-1adc-39752487f4e2"
+ParallelDataTransfer = "2dcacdae-9679-587a-88bb-8b444fb7085b"
+Permutations = "2ae35dd2-176d-5d53-8349-f30d82d94d4f"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+Tullio = "bc48ee85-29a4-5162-ae0b-a64e1601d4bc"
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+
+[compat]
+Aqua = "0.8.14"
+Dagger = "0.19.2"
+JSON3 = "1.14.3"
+Permutations = "0.4.22"
+ProgressMeter = "1.10.4"
+Revise = "3.7.6"
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]

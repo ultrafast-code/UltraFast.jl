@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "model_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "sampling_size": {
+      "type": "integer"
+    },
+    "niterations": {
+      "type": "integer"
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "alpha": {
+              "type": "integer"
+            },
+            "nspins": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "alpha",
+            "nspins"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "settings"
+      ]
+    },
+    "optimiser": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "learning_rate": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "learning_rate"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "settings"
+      ]
+    },
+    "system": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "Jx": {
+              "type": "number"
+            },
+            "Jy": {
+              "type": "number"
+            },
+            "Lx": {
+              "type": "integer"
+            },
+            "Ly": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "Jx",
+            "Jy",
+            "Lx",
+            "Ly"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "settings"
+      ]
+    },
+    "montecarlo": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "thermalisation": {
+              "type": "integer"
+            },
+            "sweeps": {
+              "type": "integer"
+            },
+            "updates": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "thermalisation",
+            "sweeps",
+            "updates"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "settings"
+      ]
+    },
+    "observables": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "settings": {
+              "type": "object",
+              "properties": {
+                "axis": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "axis"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "settings"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "settings": {
+              "type": "object",
+              "properties": {
+                "axis": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "axis"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "settings"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "model_name",
+    "type",
+    "sampling_size",
+    "niterations",
+    "model",
+    "optimiser",
+    "system",
+    "montecarlo",
+    "observables"
+  ]
+}

@@ -1,0 +1,9 @@
+/Manifest.toml
+/docs/Manifest.toml
+/docs/build/
+.DS_Store
+builds/
+*.cov
+LocalPreferences.toml
+test/translation_invariant
+*.mem

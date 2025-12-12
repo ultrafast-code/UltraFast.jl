@@ -1,0 +1,37 @@
+{
+    "version": {
+        "fileversion": "1.0"
+    },
+    "lattice": {
+        "type": "Default",
+        "Lx": 4,
+        "Ly": 1
+    },
+    "hamiltonian": {
+        "type": "Heisenberg",
+        "J_x": 1.0,
+        "J_y": 1.0
+    },
+    "model": {
+        "type": "RBMModelLog",
+        "alpha": 1,
+        "weight_initializer": "real_default_uniform"
+    },
+    "sampler": {
+        "type": "MultiProcessingMHSampler",
+        "nthermalization": 200,
+        "nsamples": 2000,
+        "nprocesses": 1
+    },
+    "gradient": {
+        "type": "Plain"
+    },
+    "optimiser": {
+        "type": "GradientDescent",
+        "learning_rate": 0.005
+    },
+    "groundstateoptimiser": {
+        "type": "DefaultGroundState",
+        "niterations": 2
+    }
+}

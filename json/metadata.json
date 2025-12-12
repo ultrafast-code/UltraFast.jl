@@ -1,0 +1,41 @@
+{
+    "version": {
+        "fileversion": "1.0"
+    },
+    "lattice": {
+        "type": "Default",
+        "Lx": 6,
+        "Ly": 1
+    },
+    "hamiltonian": {
+        "type": "Heisenberg",
+        "J_x": 1.0,
+        "J_y": 1.0
+    },
+    "model": {
+        "type": "QuantumVisionTransformer",
+        "nheads": 1,
+        "d": 2,
+        "b": 2
+    },
+    "sampler": {
+        "type": "MultiProcessingMHSampler",
+        "nthermalization": 200,
+        "nsamples": 2000,
+        "nprocesses": 4
+    },
+    "gradient": {
+        "type": "StochasticReconfiguration",
+        "max_epsilon" : 0.0001,
+        "falloff_rate": 0.9,
+        "initial_falloff_rate": 200
+    },
+    "optimiser": {
+        "type": "GradientDescent",
+        "learning_rate": 0.005
+    },
+    "groundstateoptimiser": {
+        "type": "DefaultGroundState",
+        "niterations": 10
+    }
+}
