@@ -9,8 +9,7 @@ makedocs(;
     repo="https://gitlab.science.ru.nl/ultrafast-code/ultrafast.jl/blob/{commit}{path}#{line}",
     sitename="UltraFast.jl",
     format=Documenter.HTML(;
-        prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://ultrafast-code.pages.science.ru.nl/ultrafast.jl",
+        canonical="https://ultrafast-code.github.io/UltraFast.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -23,3 +22,7 @@ makedocs(;
     ],
 )
 
+deploydocs(;
+    repo="github.com/ultrafast-code/UltraFast.jl",
+    devbranch="main",
+)

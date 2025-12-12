@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: UltraFast.jl
 version: v3.0.0
 date-released: 2025-12-01
-url: https://gitlab.science.ru.nl/ultrafast-code/ultrafast.jl
+url: https://github.com/ultrafast-code/UltraFast.jl
 authors:
   - family-names: Berns
     given-names: R.J.L.F.
