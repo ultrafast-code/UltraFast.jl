@@ -28,7 +28,7 @@ lattice.
 
 ## Citing and authors
 It is written by R.J.L.F. Berns, P.F.A. Coenders, G. Fabiani and J.H. Mentink
-for research purpose. Any use of ULTRAFAST for scientific research has to
-provide citation to ultrafast-code/ULTRAFAST.
+for research purpose. Any use of UltraFast.jl for scientific research has to
+provide citation to ultrafast-code/UltraFast.jl.
 
 See [`CITATION.bib`](CITATION.bib) for how to cite `UltraFast.jl` in your publications.
