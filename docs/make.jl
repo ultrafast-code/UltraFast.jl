@@ -6,7 +6,7 @@ DocMeta.setdocmeta!(UltraFast, :DocTestSetup, :(using UltraFast); recursive=true
 makedocs(;
     modules=[UltraFast],
     authors="R.J.L.F. Berns, P.F.A Coenders, G. Fabiani and J.H. Mentink",
-    repo="https://gitlab.science.ru.nl/ultrafast-code/ultrafast.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/ultrafast-code/UltraFast.jl/blob/{commit}{path}#{line}",
     sitename="UltraFast.jl",
     format=Documenter.HTML(;
         canonical="https://ultrafast-code.github.io/UltraFast.jl",
