@@ -31,4 +31,6 @@ It is written by R.J.L.F. Berns, P.F.A. Coenders, G. Fabiani and J.H. Mentink
 for research purpose. Any use of UltraFast.jl for scientific research has to
 provide citation to ultrafast-code/UltraFast.jl.
 
+This package builds upon the code in [ultrafast-code/ULTRAFAST](https://github.com/ultrafast-code/ULTRAFAST).
+
 See [`CITATION.bib`](CITATION.bib) for how to cite `UltraFast.jl` in your publications.
