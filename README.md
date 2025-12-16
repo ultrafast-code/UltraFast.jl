@@ -9,7 +9,7 @@ The package implements ground state optimization of Restricted Boltzmann Machine
 allowing for efficient simulations of larger systems.
 
 The documentation can be found 
-[here](https://ultrafast-code.pages.science.ru.nl/ultrafast.jl/).
+[here](https://ultrafast-code.github.io/UltraFast.jl/).
 
 ## How to install
 To install `UltraFast.jl`, run the following command in the Julia REPL:
