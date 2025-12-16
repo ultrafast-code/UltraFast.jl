@@ -24,5 +24,5 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/ultrafast-code/UltraFast.jl",
-    devbranch="main",
+    devbranch="v3.0.0"
 )
